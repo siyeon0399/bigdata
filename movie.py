@@ -9,7 +9,7 @@ soup = BeautifulSoup(data.text, 'html.parser')
 # 내가 원하는 위치에 있는 데이터 가져오기
 '''
 여기는 여러줄로 설명할수 있어요
-또 써도 돼요
+또 써도 되요
 '''
 #title = soup.select_one('#old_content > table > tbody > tr:nth-child(6) > td.title > div > a')
 #print(title.text)
@@ -24,5 +24,6 @@ for tr in trs:
     a_tag = tr.select_one("td.title > div > a")
     # 만약에 a_tag 가 None이 아니면 text를 출력
     if a_tag is not None:
-         rank = rank + 1
+        rank = rank + 1
         print(rank, a_tag.text)
+        
